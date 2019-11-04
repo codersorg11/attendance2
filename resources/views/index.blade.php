@@ -1,7 +1,38 @@
 @extends('layouts.app')
 
+@section('title')
+  HOME
+@endsection
+
 @section('content')
 
+<div class="classname">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="container">
+ <ul class="nav nav-tabs">
+  <li class="nav-item">
+   <a class="nav-link" style="color:#060606"href="/">HOME</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" style="color:#060606" href="/timetable">TIMETABLE</a>
+    </li>
+  <li class="nav-item">
+    <a class="nav-link" style="color:#060606" href="/venue">VENUE RESERVATION</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" style="color:#060606"href="/report">REPORT</a>
+  </li>
+</ul>
+ 
+</div>
+</nav>
+</div>
+
+<br>
 <div class="container">
   <div class="row">
 
@@ -15,7 +46,7 @@
 
           </div>
           <div class="photo"><img class="image_size" src="{{ asset('img/timetable.png') }}"></img></div>
-          <div class="down_bar"><div class="middle"><button class="btn btn-dark button_size" onclick="location.href='http://google.com';" type="button">View timetable</button></div></div>
+          <div class="down_bar"><center><button class="btn btn-primary" onclick="location.href='/timetable';" type="button">View timetable</button></center></div>
 
         </div>
 
@@ -31,7 +62,7 @@
 
           </div>
           <div class="photo"><img class="image_size" src="{{ asset('img/venue.png') }}"></img></div>
-          <div class="down_bar"><div class="middle"><button class="btn btn-dark button_size" onclick="location.href='http://google.com';" type="button">View timetable</button></div></div>
+          <div class="down_bar"><center><button class="btn btn-primary" onclick="location.href='/venue';" type="button">Reserve Venue</button></center></div>
 
         </div>
 
@@ -49,7 +80,7 @@
 
           </div>
           <div class="photo"><img class="image_size_wide" src="{{ asset('img/report.png') }}"></img></div>
-          <div class="down_bar"><div class="middle"><button class="btn btn-dark button_size" onclick="location.href='http://google.com';" type="button">View timetable</button></div></div>
+          <div class="down_bar"><center><button class="btn btn-primary" onclick="location.href='/report';" type="button">Generate Report</button></center></div>
 
         </div>
       </div>

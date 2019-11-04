@@ -22,8 +22,23 @@ Route::post('/login/custom', [
 
 Route::get('/', 'HomeController@index')->name('first');
 
+
+
 Route::group(['middleware' => 'auth'], function(){
 
+Route::get('/timetable', function () {
+     return View ('timetable');
 
+});
+
+Route::get('/venue', function () {
+     return View ('venue');
+
+});
+
+Route::get('/report', function () {
+     return View ('report');
+
+});
 
 });
